@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "gravity-vite": "^1.1.0"
+    "gravity-vite": "^1.1.0",
+    "vue.js": "^0.3.2"
   }
 }
