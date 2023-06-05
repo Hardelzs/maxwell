@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #btn{
+        float: left;
+        width: 20px;
+        height: 24px;
+        background: linear-gradient(white, #ddd);
+        border: #aaa 1px solid;
+        border-radius: 2px;
+        padding: 2px 5px;
+        cursor: pointer;
+        transition: border  0.3s linear 0s;
+    }
+    #btn:hover{
+        border: blue 1px solid;
+    }
+    #btn:hover div{
+        background: blue;
+    }
+
+    #btn > div{
+        width: 20px;
+        height: 4px;
+        background: #333;
+        margin: 3px 0px;
+        border-radius: 4px;
+        transition: backgroung  0.3s linear 0s;
+    }
+    #cp{
+        position: fixed;
+        right: -260px;
+        top: 60px;
+        width: 260px;
+        height: 0px;
+        background: #333;
+        transition: right 0.3s linear 0s;
+
+    }
+</style>
+<script>
+function toggleCP(){
+    var cp = document.getElementById("cp");
+    cp.style.height = window.innerHeight - 60+"px";
+    if(cp.style.right == "0px") {
+        cp.style.right == "-260px";
+    } else {
+        cp.style.right == "opx";
+    }
+}
+</script>
+<body>
+    <div id="btn" onclick="toggleCP()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div id="cp"></div>
+    <div id="page content">
+        <script>
+            for(var i = 0; i <40; i++){document.write("<h2>"+(i+1)+" .dummy page content .....</h2>");}
+        </script>
+    </div>
+</body>
+</html>
