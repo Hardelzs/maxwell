@@ -10,4 +10,4 @@ function togglecp(){
         }
         for (var i = 0; i <40; i++){document.write("<h2>"+(i+1)+" .dummy page content .....</h2>");}
 
-                
+                ']'
